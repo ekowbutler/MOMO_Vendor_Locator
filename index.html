@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_c9c6722cd679c4c67ab4b5bfa2c8a33c {
+                #map_9675141542ee264ef90881b0544d8ede {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_c9c6722cd679c4c67ab4b5bfa2c8a33c" ></div>
+            <div class="folium-map" id="map_9675141542ee264ef90881b0544d8ede" ></div>
         
 </body>
 <script>
     
     
-            var map_c9c6722cd679c4c67ab4b5bfa2c8a33c = L.map(
-                "map_c9c6722cd679c4c67ab4b5bfa2c8a33c",
+            var map_9675141542ee264ef90881b0544d8ede = L.map(
+                "map_9675141542ee264ef90881b0544d8ede",
                 {
                     center: [5.5403889, -0.2707222],
                     crs: L.CRS.EPSG3857,
@@ -60,10 +60,37 @@
 
         
     
-            var tile_layer_1822662a1f40c0713b35b780e134b161 = L.tileLayer(
+            var tile_layer_24c7edf5517df72133d5cbafafa60ff5 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_c9c6722cd679c4c67ab4b5bfa2c8a33c);
+            ).addTo(map_9675141542ee264ef90881b0544d8ede);
         
+    
+            var marker_0346f6f5a3d1df87797ce523fdbac2d7 = L.marker(
+                [5.54, -0.27],
+                {}
+            ).addTo(map_9675141542ee264ef90881b0544d8ede);
+        
+    
+            var icon_63079ef77a229ee75c61d37bf3a98b7e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0346f6f5a3d1df87797ce523fdbac2d7.setIcon(icon_63079ef77a229ee75c61d37bf3a98b7e);
+        
+    
+        var popup_e1b37827bad8adbdf0aab2965d44d0b4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d7b1bbaf950a913cb63ddeac3903ae94 = $(`<div id="html_d7b1bbaf950a913cb63ddeac3903ae94" style="width: 100.0%; height: 100.0%;">A&C Ventures</div>`)[0];
+                popup_e1b37827bad8adbdf0aab2965d44d0b4.setContent(html_d7b1bbaf950a913cb63ddeac3903ae94);
+            
+        
+
+        marker_0346f6f5a3d1df87797ce523fdbac2d7.bindPopup(popup_e1b37827bad8adbdf0aab2965d44d0b4)
+        ;
+
+        
+    
 </script>
 </html>
