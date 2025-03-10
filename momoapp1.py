@@ -3,13 +3,18 @@ import pandas
 
 data = pandas.read_csv("locations.txt")
 lat = list(data["LAT"])
-lon = list(data["LAT"])
-Shop_name = list(data["NAMe"])
+lon = list(data["LON"])
+Shop_name = list(data["Name"])
 
-my_area_map = folium.Map(location=[5.5403889, -0.2707222], zoom_start=6)
-my_area_map.add_child(
-    folium.Marker(
-        location=[5.54, -0.27], popup="A&C Ventures", icon=folium.Icon(color="blue")
+map = folium.Map(location=[lat[0], lon[0]], zoom_start=50)
+
+fg = folium.FeatureGroup(name="My Area Map")
+
+for lt, ln, nm in zip(lat, lon, Shop_name):
+    fg.add_child(
+        folium.Marker(location=[lt, ln], popup=nm, icon=folium.Icon(color="blue"))
     )
-)
-my_area_map.save("index.html")
+
+
+map.add_child(fg)
+map.save("index.html")
